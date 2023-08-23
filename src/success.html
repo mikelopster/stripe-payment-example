@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  จ่ายเงินสำเร็จ
+
+  <div>
+    <div>ชื่อ: <span id="name"></span></div>
+    <div>ที่อยู่: <span id="address"></span></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+
+  <script>
+    window.onload = async () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      const orderId = urlParams.get('id')
+      const response = await axios.get(`http://localhost:8000/order/${orderId}`)
+      const orderData = response.data
+      if (orderData.status !== 'complete') {
+        window.location.href = 'http://localhost:8888/cancel.html'
+      }
+      document.getElementById('name').innerText = orderData.name
+      address.innerText = orderData.address
+    }
+  </script>
+</body>
+
+</html>
