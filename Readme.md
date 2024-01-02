@@ -10,4 +10,4 @@ https://stripe.com/docs/payments/checkout/how-checkout-works
 [![stripe-express](https://img.youtube.com/vi/wSQmSZ5BtI8/0.jpg)](https://youtu.be/wSQmSZ5BtI8)
 
 ### อ่านฉบับบทความได้ที่
-https://docs.mikelopster.dev/blog/stripe-example
+https://blog.mikelopster.dev/stripe-example
